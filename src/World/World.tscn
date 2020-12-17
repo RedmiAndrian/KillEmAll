@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Scripts/World.gd" type="Script" id=2]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="MainCharacter" parent="." instance=ExtResource( 1 )]
+pause_mode = 1
+position = Vector2( 512.18, 313.908 )
+
+[node name="UserInt" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" parent="UserInt" instance=ExtResource( 3 )]

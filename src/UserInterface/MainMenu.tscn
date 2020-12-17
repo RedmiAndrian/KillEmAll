@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/UserInterface/Button/PlayBtn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/UserInterface/QuitBtn.tscn" type="PackedScene" id=2]
+
+[node name="MainMenu" type="Node"]
+pause_mode = 2
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.0
+margin_top = 164.049
+margin_right = 36.0
+margin_bottom = 178.049
+rect_scale = Vector2( 2, 2 )
+text = "Kill 'Em All!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -82.0
+margin_right = 91.0
+margin_bottom = 9.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_right = 111.0
+margin_bottom = 43.0
+next_scene = "res://src/World/World.tscn"
+
+[node name="QuitBtn" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 47.0
+margin_right = 111.0
+margin_bottom = 91.0
